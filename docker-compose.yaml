@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  tata:
+    image: postgres:latest
+    container_name: tata_db
+    environment:
+      POSTGRES_USER: tata_usr
+      POSTGRES_PASSWORD: tata_pwd
+      POSTGRES_DB: tata_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - db1_data:/var/lib/postgresql/data
+      - ./init-scripts:/docker-entrypoint-initdb.d/
+    restart: unless-stopped
+
+volumes:
+  db1_data:

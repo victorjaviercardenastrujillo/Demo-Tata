@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi API personalizada</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.52.5/swagger-ui.css">
+    <style>
+        /* Personalizaciones de estilo */
+        body {
+            background-color: #ffffff;
+        }
+        .swagger-ui .topbar {
+            background-color: #000000;
+        }
+    </style>
+</head>
+<body>
+<div id="swagger-ui"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.52.5/swagger-ui-bundle.js"></script>
+<script>
+    // Configuración de Swagger UI
+    window.onload = function() {
+        const ui = SwaggerUIBundle({
+            url: '/openapi', // URL del archivo OpenAPI generado
+            dom_id: '#swagger-ui',
+            deepLinking: true,
+            presets: [
+                SwaggerUIBundle.presets.apis,
+                SwaggerUIBundle.SwaggerUIStandalonePreset
+            ],
+            layout: "BaseLayout", // Cambiar el diseño si es necesario
+            docExpansion: "none", // Opciones: "list", "full", "none"
+            defaultModelsExpandDepth: -1 // No expandir los modelos por defecto
+        });
+    };
+</script>
+</body>
+</html>
