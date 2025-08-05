@@ -23,7 +23,7 @@ Proyecto Demo para Tata
 cd directorioproyecto
 Abrimos gitbash
 git init
-git clone https://gitlab.com/victorjcardenast/tata-demo
+git clone https://github.com/victorjaviercardenastrujillo/Demo-Tata.git
 
 ```
 
